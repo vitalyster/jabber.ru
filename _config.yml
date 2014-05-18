@@ -1,3 +1,4 @@
 name: Jabber.Ru
 markdown: redcarpet
 pygments: true
+auto: true
