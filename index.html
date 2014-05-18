@@ -1,133 +1,67 @@
-<!DOCTYPE html>
-
-<html lang="ru">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Jabber.ru - Общение для всех</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Loading Bootstrap -->
-    <link rel="stylesheet" href="css/magic-bootstrap.css">
-
-    <link rel="stylesheet" href="css/jru.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
-    <link rel="shortcut icon" href="images/favicon.png">
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <![endif]-->
-</head>
-<body role="document">
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Jabber.Ru</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Новости</a></li>
-                <li><a href="#about">Рейтинг конференций</a></li>
-                <li><a href="#contact">Чатлоги</a></li>
-                <li><a href="#contact">О проекте</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-
-                <li><a href="#about">Регистрация</a></li>
-                <li><a href="#contact">Вход</a></li>
-
-            </ul>
-        </div>
+---
+layout: base
+---
+<div class="row">
+    <div class="jumbotron">
+        <h1>
+            <img src="./images/logo/logo.png" width="50px">
+            Jabber.Ru <br>
+            <small>свободное общение для всех</small>
+        </h1>
     </div>
-
-
 </div>
-<div class="wrapper">
-    <div class="container" role="main">
-        <div class="row">
-            <div class="jumbotron">
-                <h1>
-                    <!--I think that logo is something that good to have but Zinid asked to delete it-->
-                    <!--        <img src="./images/logo/logo.png" width="50px">  -->
-                    Jabber.Ru <br>
-                    <small>свободное общение для всех</small>
-                </h1>
-            </div>
-        </div>
-        <div class="row col-sm-8">
+<div class="row col-sm-8">
 
-            <div class="span12">
-                <h1>Новости проекта</h1>
-
-                <div class="tile-hot">
-
-
-                    <h3 class="tile-title">SIddP, SMS, Push
-                        <small>2014-04-28</small>
-                    </h3>
-                    <p align="left">SIP — в качестве логина полный джид. <a
-                            href="http://juick.com/zinid/2699551">Подробные
-                        настройки</a></p>
-
-                    <p>SMS — можно получать уведомления о пропущенных сообщениях и отправка на любой номер. <a
-                            href="http://juick.com/zinid/2697872">Подробные настройки</a></p>
-
-                    <p>Push — работает только в клиенте <a href="http://db.tt/0wxcR849">Sawim for Android beta
-                        (apk)</a>
-                    </p>
-                </div>
-                <div class="tile-hot">
-
-
-                    <h3 class="tile-title">Чистка
-                        <small>2013-10-11</small>
-                    </h3>
-                    <p align="left">На jabber.ru/xmpp.ru проведена чистка аккаунтов, которые ни разу не
-                        использовались
-                        за
-                        последние два года</p>
-                </div>
-            </div>
-        </div>
-        <div id="push"></div>
+    <div class="span12">
+        <p>{{ page.id }}</p>
+        {{ content }}
     </div>
+</div>
+
+<h1 id="about">О проекте</h1>
+
+<p> Jabber — это общение для всех. Открытое и свободное. Вы можете писать друзьям по всему миру.</p>
+<p>Jabber.ru имет несколько интересных дополнительных сервисов: бесплатная отправка SMS и бесплатные звонки.</p>
+<p>Присоединяйтесь!</p>
+<h1>Команда</h1>
+<ul class="list-inline">
+    <li class="well col-sm-3">
+        <img class="team-avatar" alt="" src="https://avatars1.githubusercontent.com/u/123214?s=460">
+
+        <h3 class="tile-title">ermine</h3>
+
+        <p>Владычица</p>
+    </li>
+    <li class="well col-sm-3">
+        <img class="team-avatar" alt="" src="https://avatars1.githubusercontent.com/u/1095902?s=460">
+
+        <h3 class="tile-title">zinid</h3>
+
+        <p>Сервер</p>
+    </li>
+    <li class="well col-sm-3">
+        <img class="team-avatar" alt="" src="https://avatars0.githubusercontent.com/u/1297578?s=460">
+
+        <h3 class="tile-title">Santiago26</h3>
+
+        <p>Сайт</p>
+    </li>
+
+</ul>
+
+<div class="col-sm-8">
+
+
+    <h3 class="">Присоединяйтесь! </h3>
+    <h4>Идей много, рук мало. Вы можете помочь:</h4>
+    <ul>
+        <li>Программисты, админы — welcome! Приходите в конференцию поддержки, предлагайте помощь. <br></li>
+        <li>Можно профинансировать сервер или нужную вам фичу с помощью Яндекс.Денег</li>
+
+        <iframe frameborder="0" allowtransparency="false" scrolling="no"
+                src="https://money.yandex.ru/embed/donate.xml?uid=41001698010329&amp;default-sum=300&amp;targets=%D0%9D%D0%B0+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5+Jabber.ru&amp;project-name=Jabber.ru&amp;project-site=http%3A%2F%2Fjabber.ru%2F&amp;button-text=01&amp;hint="
+                width="450" height="105"></iframe>
 
 </div>
 
-
-<footer>
-    <div class="container">
-        <p>© 2000-2014, <a href="xmpp:support@conference.jabber.ru?join">Jabber.Ru Team</a></p>
-    </div>
-</footer>
-<!-- Load JS here for greater good =============================-->
-
-<script src="./js/jquery-1.8.2.min.js"></script>
-<script src="./js/jquery-ui-1.10.0.custom.min.js"></script>
-<script src="./js/jquery.dropkick-1.0.0.js"></script>
-<script src="./js/custom_checkbox_and_radio.js"></script>
-<script src="./js/custom_radio.js"></script>
-<script src="./js/jquery.tagsinput.js"></script>
-<script src="./js/bootstrap-tooltip.js"></script>
-<script src="./js/jquery.placeholder.js"></script>
-<script src="./js/video.js"></script>
-<script src="./js/application.js"></script>
-
-<!--[if lt IE 8]>
-<script src="js/icon-font-ie7.js"></script>
-<script src="js/icon-font-ie7-24.js"></script>
-<![endif]-->
-
-
-</body>
-</html>
+</div>    </div>

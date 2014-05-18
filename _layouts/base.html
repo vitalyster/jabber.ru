@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Jabber.ru - Общение для всех</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link rel="stylesheet" href="css/magic-bootstrap.css">
+
+    <link rel="stylesheet" href="css/jru.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body role="document"
+{% if page.url %} data-current-page="{{ page.url }}"{% endif %}>
+<div class="wrap">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Jabber.Ru</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/news.html">Новости</a></li>
+                    <li><a href="//jc.jabber.ru">Рейтинг конференций</a></li>
+                    <li><a href="/chatlogs.html">Чатлоги</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://www.jabber.ru/user/register">Регистрация</a></li>
+                    <li><a href="https://www.jabber.ru/user/reset">Сброс пароля</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container clearfix" role="main" id="main">
+        {{ content }}
+        <div id="push"></div>
+    </div>
+
+</div>
+<script type="text/javascript">
+$( document ).ready(function() {
+var currentPage = $("body").data("current-page");
+if (currentPage) {
+    $("a[href='" + currentPage + "']").parent().addClass("active");
+}
+});
+</script>
+
+<footer>
+    <div class="container">
+        <p>© 2000-2014, <a href="xmpp:support@conference.jabber.ru?join">Jabber.Ru Team</a></p>
+    </div>
+</footer>
+</body>
+</html>

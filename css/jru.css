@@ -2,10 +2,12 @@ body {
     padding-top: 70px;
     padding-bottom: 30px;
 }
-html, body {
-            height: 100%;
-        }
-        footer {
+
+.team-avatar {
+    width: 60px;
+}
+
+ footer {
             color: #666;
             background: #222;
             padding: 17px 0 18px 0;
@@ -17,34 +19,40 @@ html, body {
         footer a:hover {
             color: #efefef;
         }
-        .wrapper {
-            min-height: 100%;
-            height: auto !important;
-            height: 100%;
-            margin: 0 auto -63px;
-        }
-        .push {
-            height: 63px;
-        }
-        /* not required for sticky footer; just pushes hero down a bit */
-        .wrapper > .container {
-            padding-top: 60px;
-        }
 
-        /* responsive footer fix by Aalaap Ghag */
-        @media (max-width: 767px) {
-            body {
-                padding-right: 0px;
-                padding-left: 0px;
-            }
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 50px; /* bottom = footer height */
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+.btn .glyphicon {
+  margin-right: 8px;
+}
 
-            footer, .wrapper {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-        }
+.btn.btn-icon .glyphicon {
+  margin-right: 0;
+}
 
-        .container {
-            max-width: 940px;
-        }
-        /* end responsive footer fix */
+#messages { list-style-type: none; margin: 0; padding: 0; }
+#messages li { margin-bottom: 2.5em; }
+#messages .date { float: left; width: 6em; margin-left: -8em; text-align: center; color: #999; }
+#messages .day { font-size: x-large; }
+#messages .photo { text-align: center; }
+#messages .text { margin: 0.5em 0; }
+#messages .replies { text-align: right; }
+#messages .tags { list-style-type: none; margin: 0 0 0 1em; padding: 0; float: left; }
+#messages .tags li { display: inline; margin-right: 0.5em; }
+#messages .tags a { color: #999; text-decoration: none; border-bottom: 1px dashed #999; }
+#replies { list-style-type: none; margin: 0; padding: 0; }
+#replies li { margin-bottom: 2.5em; background-repeat: no-repeat; padding-left: 42px; }
+#replies .username { font-size: larger; }
+#navigation { background: #F0F0F0; margin: 2em 0; padding: 5px; text-align: center; }

@@ -1,0 +1,22 @@
+---
+  layout: base
+---
+    <script src="js/juick.js"></script>
+    <script type="text/javascript">
+Date.prototype.getMonthName = function() {
+  return ['Января','Февраля','Марта','Апреля','Мая','Июня','Июля','Августа','Сентября','Октября','Ноября','Декабря'][this.getMonth()];
+}
+var juickReplies="Ответов";
+var juickNewer="← Раньше";
+var juickOlder="Позже →";
+var juickName="zinid";
+$( document ).ready(function() {
+    juickInit(juickName);
+});
+
+    </script>
+                <h1>Новости проекта</h1>
+
+                <ul id="messages" class="list-group"></ul>
+                <div id="navigation"></div>
+                <ul id="replies"></ul>
