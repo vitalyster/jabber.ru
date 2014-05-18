@@ -23,7 +23,7 @@
     <![endif]-->
 </head>
 <body role="document"
-{% if page.url %} data-current-page="{{ page.path }}"{% endif %}>
+{% if page.url %} data-current-page="{{ site.baseurl}}{{ page.url }}"{% endif %}>
 <div class="wrap">
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
