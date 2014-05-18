@@ -45,7 +45,7 @@ function juickParseMessages(json) {
     var date=new Date(ts[0],ts[1]-1,ts[2]);
     var ihtml='<div class="date"><div class="day">'+date.getDate()+'</div><div class="month">'+date.getMonthName()+'</div><div class="month">'+date.getFullYear()+'</div></div>';
     
-    ihtml+='<div class="text panel panel-primary">';
+    ihtml+='<div class="text panel panel-default">';
     ihtml+='<div class="panel panel-heading"><h4><img src="http://i.juick.com/as/'+json[i].user.uid+'.png" alt="avatar"/> '+json[i].user.uname+'</h4></div>';
     ihtml+='<div class="panel panel-body">';
     if(json[i].photo)
