@@ -43,9 +43,11 @@ function juickParseMessages(json) {
 
     var ts=json[i].timestamp.split(/[\-\s]/);
     var date=new Date(ts[0],ts[1]-1,ts[2]);
-    var ihtml='<div class="date"><div class="day">'+date.getDate()+'</div><div class="month">'+date.getMonthName()+'</div></div>';
+    var ihtml='<div class="date"><div class="day">'+date.getDate()+'</div><div class="month">'+date.getMonthName()+'</div><div class="month">'+date.getFullYear()+'</div></div>';
     
-    ihtml+='<div class="text">';
+    ihtml+='<div class="text panel panel-primary">';
+    ihtml+='<div class="panel panel-heading"><h4><img src="http://i.juick.com/as/'+json[i].user.uid+'.png" alt="avatar"/> '+json[i].user.uname+'</h4></div>';
+    ihtml+='<div class="panel panel-body">';
     if(json[i].photo)
       ihtml+='<div class="photo"><a href="'+json[i].photo.medium+'"><img src="'+json[i].photo.small+'" alt="Photo"/></a></div>';
     if(json[i].video)
@@ -54,7 +56,8 @@ function juickParseMessages(json) {
       ihtml+='<b>Location:</b> <a href="/places/'+json[i].location.place_id+'">'+json[i].location.name+'</a><br/>';
     ihtml+=juickFormatText(json[i].body);
     ihtml+='</div>';
-    
+    ihtml +='</div>';
+
     if(json[i].tags) {
       ihtml+='<ul class="tags">';
       for(var n=0; n<json[i].tags.length; n++)
@@ -65,7 +68,6 @@ function juickParseMessages(json) {
     var replies=json[i].replies;
     if(!replies) replies=0;
     ihtml+='<div class="replies"><a href="//juick.com/'+json[i].mid+'">'+juickReplies+': '+replies+'</a></div>';
-
     var li=document.createElement("li");
     li.className='list-group-item';
     li.innerHTML=ihtml;
